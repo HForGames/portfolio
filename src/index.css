@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --base: #171717;
+    --second: #333333;
+    --third: #DA0037;
+    --fourth: #EDEDED;
+}
+
+body {
+    @apply bg-base;
+}
+
+html {
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+}
+
+@font-face {
+    font-family: Space Grotesk;
+    src: url(assets/SpaceGrotesk-Regular.ttf);
+}
+
+@layer base {
+    html {
+        font-family: Space Grotesk, system-ui, sans-serif;
+    }
+}
+
+* {
+    @apply text-fourth;
+}
+
+a {
+    @apply text-third;
+}
+
+a:hover {
+    @apply text-second;
+    @apply font-bold;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    @apply font-bold;
+}
+
+h3 {
+
+    @apply md:text-xl;
+}
+
+hr.reveal{
+    width: 0;
+    border: var(--third) 1px solid;
+    transition: width 1s;
+}
+
+hr.reveal.active {
+    width: 100%;
+    transition: width 1s;
+}
+
+.arrow.fade {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    width: 2rem;
+    height: 2rem;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--second);
+    z-index: 0;
+    transition: opacity 0.5s;
+    animation: pop 1.5s ease-in-out both infinite;
+}
+
+.arrow.fade.active {
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+@keyframes pop {
+    0% {
+        transform: translateY(-20%) translateX(-50%);
+    }
+    50% {
+        transform: translateY(0%) translateX(-50%);
+    }
+    100% {
+        transform: translateY(-20%) translateX(-50%);
+    }
+}
+
+.img {
+    position: relative;
+}
+
+.img:hover::after {
+    transition-delay: 0s;
+    transform: translate(-5%, -5%);
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+}
+
+.img::after {
+    position: absolute;
+    width: 100%;
+    aspect-ratio: 1/1;
+    content: '';
+    z-index: -1;
+    top: 10%;
+    left: 10%;
+    transform: translate(0%, 0%);
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+    @apply rounded;
+    @apply border-2;
+    @apply border-third;
+}
