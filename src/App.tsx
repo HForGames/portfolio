@@ -84,15 +84,15 @@ const Works = [
         images: [SortifyHome, SortifyDashboard, SortifySort, SortifyCreate, SortifyFinish],
         alts: ["Sortify home", "Sortify dashboard", "Sortify sort", "Sortify create", "Sortify finish"],
         title: "Sortify",
-        description: "Sortify est une application web qui permet de trier ses musiques en fonction de leur genre a partir de spotify.",
+        description: "Sortify est une application web qui permet de trier ses musiques en fonction de leur genre à partir de Spotify.",
         link: "https://www.sortify.fr/",
         github: "https://github.com/SimonBandiera/Sortify"
     },
     {
         images: [TrackapMap, TrackapStatistics, TrackapCustomisation, TrackapProfile],
         alts: ["Trackap Map", "Trackap Statistics", "Trackap Customisation", "Trackap Profile"],
-        title: "B2B Trackap",
-        description: "La B2B de Trackap est une application web qui permet de suivre en temps réel les véhicules de la société Trackap.",
+        title: "Trackap",
+        description: "La plateforme pour les clients B2B est une application web qui permet de suivre en temps réel les véhicules de la société Trackap.",
         link: "https://b2b.trackap.com/",
     }
 ]
@@ -152,16 +152,16 @@ function App() {
                                 technologies et j'aime m'amuser à les découvrir par moi-même.
                             </h3>
                             <h3>
-                                En tant que développeur, j'adore trifouiller et essayer de nouvelles choses pour me
+                                En tant que développeur, j'adore résoudre les problèmes ainsi qu'essayer de nouvelles choses pour me
                                 perfectionner. Je suis convaincu que l'apprentissage est une aventure perpétuelle et
                                 qu'il est
                                 important de se tenir informé des dernières avancées technologiques pour rester
-                                compétent dans notre domaine.
+                                compétent dans mon domaine.
                             </h3>
                             <h3>
-                                Si vous avez des projets intéressants à réaliser, je serais ravi de discuter avec vous.
+                                Si vous avez des projets à réaliser, je serai ravi d'en échanger avec vous.
                                 N'hésitez pas à me <a href={"#Contact"}>contacter</a> pour en
-                                savoir plus sur mes expériences et mes compétences en développement !
+                                savoir plus sur les services que je propose en matière de développement.
                             </h3>
                         </div>
                         <div className={"flex justify-center"}>
@@ -186,7 +186,7 @@ function App() {
                 </div>
                 <div id={"Experience"} className={"flex flex-col justify-center min-h-screen"}>
                     <div className={"flex justify-between gap-5 mt-2"}>
-                        <h1 className={"text-2xl lg:text-5xl reveal"}>Compétence</h1>
+                        <h1 className={"text-2xl lg:text-5xl reveal"}>Compétences</h1>
                         <div className={"flex flex-col justify-center w-1/3"}>
                             <hr className={"reveal"}/>
                         </div>
@@ -207,7 +207,7 @@ function App() {
                     <div className={"flex flex-col justify-center items-center gap-5 mt-6 lg:mt-10 h-1/2"}>
                         <div className={"flex w-full md:w-2/3 flex-col justify-center gap-5 reveal"}>
                             <h3 className={"text-center"}>
-                                Vous avez un projet en tête ? Vous avez besoin d'un développeur pour vous aidez à
+                                Vous avez un projet en tête ? Vous avez besoin d'un développeur pour vous aider à
                                 le réaliser ? N'hésitez pas à me contacter !
                             </h3>
                         </div>
