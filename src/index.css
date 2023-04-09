@@ -51,6 +51,16 @@ h3 {
     @apply md:text-xl;
 }
 
+div.reveal {
+    opacity: 0;
+    transition: 1s ease-in-out;
+}
+
+div.reveal.active {
+    opacity: 1;
+    transition : 1s ease-in-out;
+}
+
 hr.reveal{
     width: 0;
     border: var(--third) 1px solid;
@@ -75,13 +85,13 @@ hr.reveal.active {
     transform: translateX(-50%);
     background-color: var(--second);
     z-index: 0;
-    transition: opacity 0.5s;
+    transition: opacity 1s;
     animation: pop 1.5s ease-in-out both infinite;
 }
 
 .arrow.fade.active {
     opacity: 0;
-    transition: opacity 0.5s;
+    transition: opacity 1s;
 }
 
 @keyframes pop {
@@ -119,4 +129,17 @@ hr.reveal.active {
     @apply rounded;
     @apply border-2;
     @apply border-third;
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--second);
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: var(--third);
 }

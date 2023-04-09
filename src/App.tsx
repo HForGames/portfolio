@@ -1,6 +1,7 @@
 import React, {useEffect} from 'react';
 import Navbar from "./Component/Navbar";
-import Card from "./Component/Card";
+import CardWork from "./Component/CardWork";
+import CardCompetence from "./Component/CardCompetence";
 
 import SvgArrow from "./Svg/ArrowDown";
 
@@ -14,8 +15,83 @@ import imgMongoDB from "./assets/images/mongodb.png";
 import imgSql from "./assets/images/sql.png";
 import imgGit from "./assets/images/git.png";
 
+import SortifyDashboard from "./assets/images/Sortify/dashboard.png";
+import SortifyCreate from "./assets/images/Sortify/create.png";
+import SortifyHome from "./assets/images/Sortify/home.png";
+import SortifySort from "./assets/images/Sortify/sort.png";
+import SortifyFinish from "./assets/images/Sortify/finish.png";
+
+import TrackapMap from "./assets/images/Trackap/Map.png"
+import TrackapProfile from "./assets/images/Trackap/Profile.png"
+import TrackapStatistics from "./assets/images/Trackap/Statistics.png"
+import TrackapCustomisation from "./assets/images/Trackap/Customisation.png"
 
 import defaultTheme from "./constant";
+
+const Competences = [
+    {
+        image: imgReact,
+        alt: "React Logo",
+        value: 70
+    },
+    {
+        image: imgNode,
+        alt: "NodeJs Logo",
+        value: 80
+    },
+    {
+        image: imgPython,
+        alt: "Python Logo",
+        value: 90
+    },
+    {
+        image: imgC,
+        alt: "C Logo",
+        className: "hidden 2xl:block",
+        value: 80
+    },
+    {
+        image: imgCpp,
+        alt: "C++ Logo",
+        className: "hidden md:block",
+        value: 60,
+    },
+    {
+        image: imgMongoDB,
+        alt: "MongoDB Logo",
+        value: 80,
+    },
+    {
+        image: imgSql,
+        alt: "Sql Logo",
+        value: 60,
+        className: "hidden md:block"
+    },
+    {
+        image: imgGit,
+        alt: "Git Logo",
+        value: 70,
+        className: "hidden 2xl:block"
+    }
+]
+
+const Works = [
+    {
+        images: [SortifyHome, SortifyDashboard, SortifySort, SortifyCreate, SortifyFinish],
+        alts: ["Sortify home", "Sortify dashboard", "Sortify sort", "Sortify create", "Sortify finish"],
+        title: "Sortify",
+        description: "Sortify est une application web qui permet de trier ses musiques en fonction de leur genre a partir de spotify.",
+        link: "https://www.sortify.fr/",
+        github: "https://github.com/SimonBandiera/Sortify"
+    },
+    {
+        images: [TrackapMap, TrackapStatistics, TrackapCustomisation, TrackapProfile],
+        alts: ["Trackap Map", "Trackap Statistics", "Trackap Customisation", "Trackap Profile"],
+        title : "B2B Trackap",
+        description: "La B2B de Trackap est une application web qui permet de suivre en temps réel les véhicules de la société Trackap.",
+        link: "https://b2b.trackap.com/",
+    }
+]
 
 function App() {
     useEffect(() => {
@@ -54,7 +130,7 @@ function App() {
                 <div className={"flex flex-col justify-center h-screen gap-3"}>
                     <p className={"font-light"}>Bonjour, Je suis</p>
                     <h1 className={"text-5xl md:text-7xl"}>Hugo GALAN.</h1>
-                    <h1 className={"text-5xl md:text-7xl"}>Dévelopeur.</h1>
+                    <h1 className={"text-5xl md:text-7xl"}>Développeur.</h1>
                     <p className={"md:text-2xl"}>Transformez votre vision en réalité digitale avec un développeur
                         expérimenté et passionné !
                     </p>
@@ -69,7 +145,7 @@ function App() {
                     <div className={"flex flex-col-reverse md:flex-row justify-around mt-6 lg:mt-10 gap-14"}>
                         <div className={"flex flex-col gap-5 md:w-6/12 reveal"}>
                             <h3>
-                                Bounjour, Je suis Hugo. J'ai développé une réelle curiosité pour les nouvelles
+                                Bounjour, je suis Hugo. J'ai développé une réelle curiosité pour les nouvelles
                                 technologies et j'aime m'amuser à les découvrir par moi-même.
                             </h3>
                             <h3>
@@ -81,7 +157,7 @@ function App() {
                             </h3>
                             <h3>
                                 Si vous avez des projets intéressants à réaliser, je serais ravi de discuter avec vous.
-                                N'hésitez pas à me contacter pour en
+                                N'hésitez pas à me <a href={"#Contact"}>contacter</a> pour en
                                 savoir plus sur mes expériences et mes compétences en développement !
                             </h3>
                         </div>
@@ -92,6 +168,18 @@ function App() {
                         </div>
                     </div>
                 </div>
+                <div id={"Work"} className={"flex flex-col justify-center min-h-screen"}>
+                    <div className={"flex justify-between gap-5 mt-2"}>
+                        <h1 className={"text-2xl lg:text-5xl"}>Work</h1>
+                        <div className={"flex flex-col justify-center w-1/3"}>
+                            <hr className={"reveal"}/>
+                        </div>
+                    </div>
+                    <div className={"flex flex-wrap justify-around gap-5 mt-6 lg:mt-10"}>
+                        {Works.map((e, i) => <CardWork key={i} images={e.images} alts={e.alts} title={e.title}
+                                                       description={e.description} github={e?.github} siteLink={e?.link}/>)}
+                    </div>
+                </div>
                 <div id={"Experience"} className={"flex flex-col justify-center min-h-screen"}>
                     <div className={"flex justify-between gap-5 mt-2"}>
                         <h1 className={"text-2xl lg:text-5xl"}>Compétence</h1>
@@ -100,22 +188,9 @@ function App() {
                         </div>
                     </div>
                     <div className={"flex flex-wrap justify-around gap-5 mt-6 lg:mt-10"}>
-                        <Card min={0} max={100} color={defaultTheme.theme.colors.third} value={70} image={imgReact}
-                              alt={"React competence"}/>
-                        <Card min={0} max={100} color={defaultTheme.theme.colors.third} value={80} image={imgNode}
-                              alt={"NodeJs competence"}/>
-                        <Card min={0} max={100} color={defaultTheme.theme.colors.third} value={95} image={imgPython}
-                              alt={"Python competence"}/>
-                        <Card className={"hidden 2xl:block"} min={0} max={100} color={defaultTheme.theme.colors.third}
-                              value={80} image={imgC} alt={"C competence"}/>
-                        <Card className={"hidden md:block"} min={0} max={100} color={defaultTheme.theme.colors.third}
-                              value={70} image={imgCpp} alt={"C++ competence"}/>
-                        <Card min={0} max={100} color={defaultTheme.theme.colors.third} value={90} image={imgMongoDB}
-                              alt={"MongoDb competence"}/>
-                        <Card className={"hidden md:block"} min={0} max={100} color={defaultTheme.theme.colors.third}
-                              value={60} image={imgSql} alt={"Sql competence"}/>
-                        <Card className={"hidden 2xl:block"} min={0} max={100} color={defaultTheme.theme.colors.third}
-                              value={70} image={imgGit} alt={"Git competence"}/>
+                        {Competences.map((e, i) => <CardCompetence key={i} value={e.value} image={e.image} alt={e.alt}
+                                                                   className={e?.className} max={100} min={0}
+                                                                   color={defaultTheme.theme.colors.third}/>)}
                     </div>
                 </div>
             </div>

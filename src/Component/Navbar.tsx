@@ -40,8 +40,8 @@ function Navbar() {
             <nav className={(open ? "nav-open" : "items-end hidden md:block nav-close")}>
                 <ul className={(open ? "ul-open" : "flex gap-4 ul-close")}>
                     <li className={"open-anim"}><a href={"#About"} onClick={CloseNav} className={"nav-a"}>A propos de moi</a></li>
-                    <li className={"open-anim"}><a href={"#Experience"} onClick={CloseNav} className={"nav-a"}>Compétence</a></li>
                     <li className={"open-anim"}><a href={"#Work"} onClick={CloseNav} className={"nav-a"}>Work</a></li>
+                    <li className={"open-anim"}><a href={"#Experience"} onClick={CloseNav} className={"nav-a"}>Compétence</a></li>
                     <li className={"open-anim"}><a href={"#Contact"} onClick={CloseNav} className={"nav-a"}>Contact</a></li>
                 </ul>
             </nav>

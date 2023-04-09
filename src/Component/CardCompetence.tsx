@@ -1,5 +1,5 @@
 import React from 'react';
-import './Card.css';
+import './CardCompetence.css';
 
 interface props {
     value: number;
@@ -11,7 +11,7 @@ interface props {
     alt: string;
 }
 
-function Card(props: props) {
+function CardCompetence(props: props) {
     const style = {"--num": props.value} as React.CSSProperties;
     return (
         <div className={props.className}>
@@ -29,4 +29,4 @@ function Card(props: props) {
     )
 }
 
-export default Card;
+export default CardCompetence;
