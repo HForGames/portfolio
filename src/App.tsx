@@ -1,4 +1,6 @@
 import React, {useEffect} from 'react';
+import defaultTheme from "./constant";
+
 import Navbar from "./Component/Navbar";
 import CardWork from "./Component/CardWork";
 import CardCompetence from "./Component/CardCompetence";
@@ -29,8 +31,6 @@ import TrackapMap from "./assets/images/Trackap/Map.png"
 import TrackapProfile from "./assets/images/Trackap/Profile.png"
 import TrackapStatistics from "./assets/images/Trackap/Statistics.png"
 import TrackapCustomisation from "./assets/images/Trackap/Customisation.png"
-
-import defaultTheme from "./constant";
 
 const Competences = [
     {
@@ -123,9 +123,8 @@ function App() {
             });
         });
     }, []);
-
     return (
-        <>
+        <div>
             <Navbar/>
             <div className={"flex flex-col m-auto justify-around w-10/12 lg:w-3/4 xl:w-2/3 gap-10"}>
                 <a href={"#About"} className={"arrow fade"}>
@@ -206,7 +205,7 @@ function App() {
                         </div>
                     </div>
                     <div className={"flex flex-col justify-center items-center gap-5 mt-6 lg:mt-10 h-1/2"}>
-                        <div className={"flex w-2/3 flex-col justify-center gap-5 reveal"}>
+                        <div className={"flex w-full md:w-2/3 flex-col justify-center gap-5 reveal"}>
                             <h3 className={"text-center"}>
                                 Vous avez un projet en tête ? Vous avez besoin d'un développeur pour vous aidez à
                                 le réaliser ? N'hésitez pas à me contacter !
@@ -214,40 +213,45 @@ function App() {
                         </div>
                         <div
                             className={"flex flex-row justify-center flex-wrap items-center w-full md:w-2/3 reveal"}>
-                            <a href={"mailto:contact@hgalan.dev"}
-                               className={"flex flex-col justify-center items-center gap-2 mt-10 w-1/2"}>
-                                <SvgMail className={"w-10"} color={defaultTheme.theme.colors.third}/>
+                            <div className={"flex flex-col justify-center items-center gap-2 mt-10 w-1/2"}>
+                                <a href={"mailto:contact@hgalan.dev"}>
+                                    <SvgMail className={"w-10"} color={defaultTheme.theme.colors.third}/>
+                                </a>
                                 <p className={"text-center"}>
                                     contact@hgalan.dev
                                 </p>
-                            </a>
-                            <a href={"https://www.linkedin.com/in/hugo-galan-8a8290233/"} target={"_blank"}
-                               rel={"noreferrer"}
-                               className={"flex flex-col justify-center items-center gap-2 mt-10 w-1/2"}>
-                                <SvgLinkedin className={"w-10"} color={defaultTheme.theme.colors.third}/>
+                            </div>
+                            <div className={"flex flex-col justify-center items-center gap-2 mt-10 w-1/2"}>
+                                <a href={"https://www.linkedin.com/in/hugo-galan-8a8290233/"} target={"_blank"}
+                                   rel={"noreferrer"}>
+                                    <SvgLinkedin className={"w-10"} color={defaultTheme.theme.colors.third}/>
+
+                                </a>
                                 <p className={"text-center"}>
                                     Hugo GALAN
                                 </p>
-                            </a>
-                            <a href={"https://github.com/HForGames"} target={"_blank"} rel={"noreferrer"}
-                               className={"flex flex-col justify-center items-center gap-2 mt-10 w-1/2"}>
-                                <SvgGithub className={"w-10"} color={defaultTheme.theme.colors.third}/>
+                            </div>
+                            <div className={"flex flex-col justify-center items-center gap-2 mt-10 w-1/2"}>
+                                <a href={"https://github.com/HForGames"} target={"_blank"} rel={"noreferrer"}>
+                                    <SvgGithub className={"w-10"} color={defaultTheme.theme.colors.third}/>
+                                </a>
                                 <p className={"text-center"}>
                                     HForGames
                                 </p>
-                            </a>
-                            <a href={"tel:+336 78 73 90 81"}
-                               className={"flex flex-col justify-center items-center gap-2 mt-10 w-1/2"}>
-                                <SvgPhone className={"w-10"} color={defaultTheme.theme.colors.third}/>
+                            </div>
+                            <div className={"flex flex-col justify-center items-center gap-2 mt-10 w-1/2"}>
+                                <a href={"tel:+336 78 73 90 81"}>
+                                    <SvgPhone className={"w-10"} color={defaultTheme.theme.colors.third}/>
+                                </a>
                                 <p className={"text-center"}>
                                     +336 78 73 90 81
                                 </p>
-                            </a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </>
+        </div>
     )
 }
 
