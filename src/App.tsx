@@ -4,6 +4,10 @@ import CardWork from "./Component/CardWork";
 import CardCompetence from "./Component/CardCompetence";
 
 import SvgArrow from "./Svg/ArrowDown";
+import SvgMail from "./Svg/Mail";
+import SvgLinkedin from "./Svg/Linkedin";
+import SvgGithub from "./Svg/Github";
+import SvgPhone from "./Svg/Phone";
 
 import imgMe from "./assets/images/me.jpeg";
 import imgReact from "./assets/images/react.png";
@@ -87,7 +91,7 @@ const Works = [
     {
         images: [TrackapMap, TrackapStatistics, TrackapCustomisation, TrackapProfile],
         alts: ["Trackap Map", "Trackap Statistics", "Trackap Customisation", "Trackap Profile"],
-        title : "B2B Trackap",
+        title: "B2B Trackap",
         description: "La B2B de Trackap est une application web qui permet de suivre en temps réel les véhicules de la société Trackap.",
         link: "https://b2b.trackap.com/",
     }
@@ -108,10 +112,10 @@ function App() {
             }
             reveals.forEach((e) => {
                 let windowHeight = window.innerHeight;
-                let elementTop = e.getBoundingClientRect().top;
+                let elementBottom = e.getBoundingClientRect().top;
                 let elementVisible = windowHeight / 5;
 
-                if (elementTop < windowHeight - elementVisible) {
+                if (elementBottom < windowHeight - elementVisible) {
                     e.classList.add("active");
                     return;
                 }
@@ -137,7 +141,7 @@ function App() {
                 </div>
                 <div id={"About"} className={"flex flex-col justify-center min-h-screen"}>
                     <div className={"flex justify-between gap-5 mt-2"}>
-                        <h1 className={"text-2xl lg:text-5xl"}>A propos de moi</h1>
+                        <h1 className={"text-2xl lg:text-5xl reveal"}>A propos de moi</h1>
                         <div className={"flex flex-col justify-center w-1/3"}>
                             <hr className={"reveal"}/>
                         </div>
@@ -170,19 +174,20 @@ function App() {
                 </div>
                 <div id={"Work"} className={"flex flex-col justify-center min-h-screen"}>
                     <div className={"flex justify-between gap-5 mt-2"}>
-                        <h1 className={"text-2xl lg:text-5xl"}>Work</h1>
+                        <h1 className={"text-2xl lg:text-5xl reveal"}>Work</h1>
                         <div className={"flex flex-col justify-center w-1/3"}>
                             <hr className={"reveal"}/>
                         </div>
                     </div>
                     <div className={"flex flex-wrap justify-around gap-5 mt-6 lg:mt-10"}>
                         {Works.map((e, i) => <CardWork key={i} images={e.images} alts={e.alts} title={e.title}
-                                                       description={e.description} github={e?.github} siteLink={e?.link}/>)}
+                                                       description={e.description} github={e?.github}
+                                                       siteLink={e?.link}/>)}
                     </div>
                 </div>
                 <div id={"Experience"} className={"flex flex-col justify-center min-h-screen"}>
                     <div className={"flex justify-between gap-5 mt-2"}>
-                        <h1 className={"text-2xl lg:text-5xl"}>Compétence</h1>
+                        <h1 className={"text-2xl lg:text-5xl reveal"}>Compétence</h1>
                         <div className={"flex flex-col justify-center w-1/3"}>
                             <hr className={"reveal"}/>
                         </div>
@@ -191,6 +196,54 @@ function App() {
                         {Competences.map((e, i) => <CardCompetence key={i} value={e.value} image={e.image} alt={e.alt}
                                                                    className={e?.className} max={100} min={0}
                                                                    color={defaultTheme.theme.colors.third}/>)}
+                    </div>
+                </div>
+                <div id={"Contact"} className={"flex flex-col justify-center min-h-screen h-screen"}>
+                    <div className={"flex justify-between gap-5 mt-2"}>
+                        <h1 className={"text-2xl lg:text-5xl reveal"}>Contact</h1>
+                        <div className={"flex flex-col justify-center w-1/3"}>
+                            <hr className={"reveal"}/>
+                        </div>
+                    </div>
+                    <div className={"flex flex-col justify-center items-center gap-5 mt-6 lg:mt-10 h-1/2"}>
+                        <div className={"flex w-2/3 flex-col justify-center gap-5 reveal"}>
+                            <h3 className={"text-center"}>
+                                Vous avez un projet en tête ? Vous avez besoin d'un développeur pour vous aidez à
+                                le réaliser ? N'hésitez pas à me contacter !
+                            </h3>
+                        </div>
+                        <div
+                            className={"flex flex-row justify-center flex-wrap items-center w-full md:w-2/3 reveal"}>
+                            <a href={"mailto:contact@hgalan.dev"}
+                               className={"flex flex-col justify-center items-center gap-2 mt-10 w-1/2"}>
+                                <SvgMail className={"w-10"} color={defaultTheme.theme.colors.third}/>
+                                <p className={"text-center"}>
+                                    contact@hgalan.dev
+                                </p>
+                            </a>
+                            <a href={"https://www.linkedin.com/in/hugo-galan-8a8290233/"} target={"_blank"}
+                               rel={"noreferrer"}
+                               className={"flex flex-col justify-center items-center gap-2 mt-10 w-1/2"}>
+                                <SvgLinkedin className={"w-10"} color={defaultTheme.theme.colors.third}/>
+                                <p className={"text-center"}>
+                                    Hugo GALAN
+                                </p>
+                            </a>
+                            <a href={"https://github.com/HForGames"} target={"_blank"} rel={"noreferrer"}
+                               className={"flex flex-col justify-center items-center gap-2 mt-10 w-1/2"}>
+                                <SvgGithub className={"w-10"} color={defaultTheme.theme.colors.third}/>
+                                <p className={"text-center"}>
+                                    HForGames
+                                </p>
+                            </a>
+                            <a href={"tel:+336 78 73 90 81"}
+                               className={"flex flex-col justify-center items-center gap-2 mt-10 w-1/2"}>
+                                <SvgPhone className={"w-10"} color={defaultTheme.theme.colors.third}/>
+                                <p className={"text-center"}>
+                                    +336 78 73 90 81
+                                </p>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>

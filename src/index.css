@@ -51,12 +51,12 @@ h3 {
     @apply md:text-xl;
 }
 
-div.reveal {
+.reveal {
     opacity: 0;
     transition: 1s ease-in-out;
 }
 
-div.reveal.active {
+.reveal.active {
     opacity: 1;
     transition : 1s ease-in-out;
 }

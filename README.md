@@ -1,6 +1,6 @@
 # Portfolio
 
-This is my portfolio website. It is built using React and is hosted on GitHub Pages.
+This is my portfolio website. It is built using React.
 
 ## Available Scripts
 

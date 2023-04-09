@@ -39,7 +39,6 @@
 
 .card .percent svg circle:nth-child(2).reveal {
     stroke-dashoffset: 630;
-    transition: stroke-dashoffset ease-in-out 2s;
 }
 
 .card .percent svg circle:nth-child(2).reveal.active {
@@ -55,13 +54,26 @@
 }
 
 .dot.reveal {
+    opacity: 0;
     transform : rotate(0deg);
-    transition: transform ease-in-out 2s;
 }
 
 .dot.reveal.active {
-    transform : rotate(calc(3.6deg * var(--num)));
-    transition: transform ease-in-out 2s;
+    animation: dotAppears 2s ease-in-out forwards;
+}
+
+@keyframes dotAppears {
+    0% {
+        opacity: 0;
+        transform : rotate(0deg);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+        transform : rotate(calc(3.6deg * var(--num)));
+    }
 }
 
 .img.competence {
