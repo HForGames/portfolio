@@ -12,7 +12,11 @@ interface props {
 }
 
 function CardCompetence(props: props) {
-    const style = {"--num": props.value} as React.CSSProperties;
+    //the offset value is not calculated in the css because when I use calc()
+    //on my phone it always returns 0 instead of the correct value
+    //I calculate it here and pass it to the css
+    //IDK why it doesn't work on my phone
+    const style = {"--num": props.value, "--offset": 630 - (630 * props.value) / 100} as React.CSSProperties;
     return (
         <div className={props.className}>
             <div className={`card`}>

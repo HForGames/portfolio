@@ -34,7 +34,11 @@
 .card .percent svg circle:nth-child(2) {
     stroke: var(--third);
     stroke-dasharray: 630;
-    stroke-dashoffset: calc(630 - (630 * var(--num)) / 100);
+    /*
+    should be calculate like that : calc(630 * var(--num) / 100)
+    but it doesn't work on my phone
+    */
+    stroke-dashoffset: var(--offset);
 }
 
 .card .percent svg circle:nth-child(2).reveal {
@@ -42,7 +46,11 @@
 }
 
 .card .percent svg circle:nth-child(2).reveal.active {
-    stroke-dashoffset: calc(630 - (630 * var(--num)) / 100);
+    /*
+   should be calculate like that : calc(630 * var(--num) / 100)
+   but it doesn't work on my phone
+   */
+    stroke-dashoffset: var(--offset);
     transition: stroke-dashoffset ease-in-out 2s;
 }
 
