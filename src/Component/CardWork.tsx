@@ -26,9 +26,9 @@ function CardWork(props: props) {
             <hr className={"reveal w-1/2 m-2"}/>
             <div className={"flex flex-row justify-around w-full border-third"}>
                 {props?.siteLink ?
-                    <a href={props?.siteLink} target={"_blank"} rel={"noreferrer"}><Site className={"w-8"}
+                    <a href={props?.siteLink} aria-label={`Go on ${props.title}`} target={"_blank"} rel={"noreferrer"}><Site className={"w-8"}
                                                                                          color={defaultTheme.theme.colors.third}/></a> : null}
-                {props?.github ? <a href={props?.github} target={"_blank"} rel={"noreferrer"}><Github className={"w-8"}
+                {props?.github ? <a href={props?.github} aria-label={`Go on ${props.title} github webpage`} target={"_blank"} rel={"noreferrer"}><Github className={"w-8"}
                                                                                                       color={defaultTheme.theme.colors.third}/></a> : null}
             </div>
         </div>)
