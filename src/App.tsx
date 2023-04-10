@@ -127,7 +127,7 @@ function App() {
         <div>
             <Navbar/>
             <div className={"flex flex-col m-auto justify-around w-10/12 lg:w-3/4 xl:w-2/3 gap-10"}>
-                <a href={"#About"} className={"arrow fade"}>
+                <a href={"#About"} aria-label={"Go on About"} className={"arrow fade"}>
                     <SvgArrow className={"w-5"} color={defaultTheme.theme.colors.third}/>
                 </a>
                 <div className={"flex flex-col justify-center h-screen gap-3"}>
@@ -152,7 +152,8 @@ function App() {
                                 technologies et j'aime m'amuser à les découvrir par moi-même.
                             </h3>
                             <h3>
-                                En tant que développeur, j'adore résoudre les problèmes ainsi qu'essayer de nouvelles choses pour me
+                                En tant que développeur, j'adore résoudre les problèmes ainsi qu'essayer de nouvelles
+                                choses pour me
                                 perfectionner. Je suis convaincu que l'apprentissage est une aventure perpétuelle et
                                 qu'il est
                                 important de se tenir informé des dernières avancées technologiques pour rester
@@ -214,7 +215,7 @@ function App() {
                         <div
                             className={"flex flex-row justify-center flex-wrap items-center w-full md:w-2/3 reveal"}>
                             <div className={"flex flex-col justify-center items-center gap-2 mt-10 w-1/2"}>
-                                <a href={"mailto:contact@hgalan.dev"}>
+                                <a href={"mailto:contact@hgalan.dev"} aria-label={"Send me a mail"}>
                                     <SvgMail className={"w-10"} color={defaultTheme.theme.colors.third}/>
                                 </a>
                                 <p className={"text-center"}>
@@ -222,7 +223,8 @@ function App() {
                                 </p>
                             </div>
                             <div className={"flex flex-col justify-center items-center gap-2 mt-10 w-1/2"}>
-                                <a href={"https://www.linkedin.com/in/hugo-galan-8a8290233/"} target={"_blank"}
+                                <a href={"https://www.linkedin.com/in/hugo-galan-8a8290233/"}
+                                   aria-label={"Go on my linkedin"} target={"_blank"}
                                    rel={"noreferrer"}>
                                     <SvgLinkedin className={"w-10"} color={defaultTheme.theme.colors.third}/>
 
@@ -232,7 +234,8 @@ function App() {
                                 </p>
                             </div>
                             <div className={"flex flex-col justify-center items-center gap-2 mt-10 w-1/2"}>
-                                <a href={"https://github.com/HForGames"} target={"_blank"} rel={"noreferrer"}>
+                                <a href={"https://github.com/HForGames"} aria-label={"Go on my github"}
+                                   target={"_blank"} rel={"noreferrer"}>
                                     <SvgGithub className={"w-10"} color={defaultTheme.theme.colors.third}/>
                                 </a>
                                 <p className={"text-center"}>
@@ -240,7 +243,7 @@ function App() {
                                 </p>
                             </div>
                             <div className={"flex flex-col justify-center items-center gap-2 mt-10 w-1/2"}>
-                                <a href={"tel:+336 78 73 90 81"}>
+                                <a href={"tel:+336 78 73 90 81"} aria-label={"Call me"}>
                                     <SvgPhone className={"w-10"} color={defaultTheme.theme.colors.third}/>
                                 </a>
                                 <p className={"text-center"}>

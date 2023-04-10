@@ -31,7 +31,7 @@ function Navbar() {
             <div className={"items-start z-10"}>
                 <h1 className={"text-2xl open-anim"}>HGALAN.DEV</h1>
             </div>
-            <button className={"block md:hidden text-firth z-10"} onClick={() => {
+            <button className={"block md:hidden text-firth z-10"} aria-label={"Open menu or close menu"} onClick={() => {
                 setOpen(!open);
             }}>
                 {open ? <SvgCross className={"w-10 open-anim"} color={defaultTheme.theme.colors.third}/> :
@@ -39,10 +39,10 @@ function Navbar() {
             </button>
             <nav className={(open ? "nav-open" : "items-end hidden md:block nav-close")}>
                 <ul className={(open ? "ul-open" : "flex gap-4 ul-close")}>
-                    <li className={"open-anim"}><a href={"#About"} onClick={CloseNav} className={"nav-a"}>A propos de moi</a></li>
-                    <li className={"open-anim"}><a href={"#Work"} onClick={CloseNav} className={"nav-a"}>Work</a></li>
-                    <li className={"open-anim"}><a href={"#Experience"} onClick={CloseNav} className={"nav-a"}>Compétence</a></li>
-                    <li className={"open-anim"}><a href={"#Contact"} onClick={CloseNav} className={"nav-a"}>Contact</a></li>
+                    <li className={"open-anim"}><a href={"#About"} aria-label={"Go on About"} onClick={CloseNav} className={"nav-a"}>A propos de moi</a></li>
+                    <li className={"open-anim"}><a href={"#Work"} aria-label={"Go on Work"} onClick={CloseNav} className={"nav-a"}>Work</a></li>
+                    <li className={"open-anim"}><a href={"#Experience"} aria-label={"Go on Competence"} onClick={CloseNav} className={"nav-a"}>Compétence</a></li>
+                    <li className={"open-anim"}><a href={"#Contact"} aria-label={"Go on Contact"} onClick={CloseNav} className={"nav-a"}>Contact</a></li>
                 </ul>
             </nav>
         </div>

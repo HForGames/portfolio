@@ -29,7 +29,7 @@ function Carousel(props: props) {
     }, [current, hover, length, props.time]);
     return (
         <div className={props?.className + " carousel"} onMouseEnter={() => {setHover(true)}} onMouseLeave={() => {setHover(false)}}>
-            {current !== 0 ? <button className={"carousel-control-prev"} onClick={() => {
+            {current !== 0 ? <button className={"carousel-control-prev"} aria-label={"Previous image"} onClick={() => {
                 setCurrent(current - 1)
             }}>
                 <ArrowLeft color={defaultTheme.theme.colors.third} className={"w-10"}/>
@@ -40,7 +40,7 @@ function Carousel(props: props) {
                          className={`carousel-img ${(i === current) ? "active" : "inactive"}`}/>
                 )
             })}
-            {current !== length - 1 ? <button className={"carousel-control-next"} onClick={() => {
+            {current !== length - 1 ? <button className={"carousel-control-next"} aria-label={"next image"} onClick={() => {
                 setCurrent(current + 1)
             }}>
                 <ArrowRight color={defaultTheme.theme.colors.third} className={"w-10"}/>
