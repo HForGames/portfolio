@@ -92,7 +92,7 @@ const Works = [
         images: [TrackapMap, TrackapStatistics, TrackapCustomisation, TrackapProfile],
         alts: ["Trackap Map", "Trackap Statistics", "Trackap Customisation", "Trackap Profile"],
         title: "Trackap",
-        description: "La plateforme pour les clients B2B est une application web qui permet de suivre en temps réel les véhicules de la société Trackap.",
+        description: "J'ai travaillé auprès de Trackap pendant 6 mois, où j'ai appris ReactJs, Mongo. J'ai été en mesure de travailler à la fois sur le back-end et à le front-end.",
         link: "https://b2b.trackap.com/",
     }
 ]
@@ -134,8 +134,7 @@ function App() {
                     <p className={"font-light"}>Bonjour, Je suis</p>
                     <h1 className={"text-5xl md:text-7xl"}>Hugo GALAN.</h1>
                     <h1 className={"text-5xl md:text-7xl"}>Développeur.</h1>
-                    <p className={"md:text-2xl"}>Transformez votre vision en réalité digitale avec un développeur
-                        expérimenté et passionné !
+                    <p className={"md:text-2xl"}>Transformez votre vision en réalité digitale avec un développeur passionné et à l'écoute !
                     </p>
                 </div>
                 <div id={"About"} className={"flex flex-col justify-center min-h-screen"}>
@@ -148,7 +147,7 @@ function App() {
                     <div className={"flex flex-col-reverse md:flex-row justify-around mt-6 lg:mt-10 gap-14"}>
                         <div className={"flex flex-col gap-5 md:w-6/12 reveal"}>
                             <h3>
-                                Bounjour, je suis Hugo. J'ai développé une réelle curiosité pour les nouvelles
+                                Bonjour, je suis Hugo. J'ai 19 ans, j'étudie a Epitech. J'ai développé une réelle curiosité pour les nouvelles
                                 technologies et j'aime m'amuser à les découvrir par moi-même.
                             </h3>
                             <h3>
@@ -158,6 +157,10 @@ function App() {
                                 qu'il est
                                 important de se tenir informé des dernières avancées technologiques pour rester
                                 compétent dans mon domaine.
+                            </h3>
+                            <h3>
+                                J'aime travailler en équipe et je suis toujours à l'écoute des autres. Je suis
+                                également très curieux et j'aime apprendre de nouvelles choses.
                             </h3>
                             <h3>
                                 Si vous avez des projets à réaliser, je serai ravi d'en échanger avec vous.
