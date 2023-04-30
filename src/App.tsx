@@ -159,8 +159,7 @@ function App() {
                                 compétent dans mon domaine.
                             </h3>
                             <h3>
-                                J'aime travailler en équipe et je suis toujours à l'écoute des autres. Je suis
-                                également très curieux et j'aime apprendre de nouvelles choses.
+                                J'aime travailler en équipe et je suis toujours à l'écoute des autres.
                             </h3>
                             <h3>
                                 Si vous avez des projets à réaliser, je serai ravi d'en échanger avec vous.
