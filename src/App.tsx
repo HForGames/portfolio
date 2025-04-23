@@ -11,7 +11,15 @@ import SvgLinkedin from "./Svg/Linkedin";
 import SvgGithub from "./Svg/Github";
 import SvgPhone from "./Svg/Phone";
 
-import imgMe from "./assets/images/me.jpeg";
+import imgMe from "./assets/images/me.jpg";
+import imgAsm from "./assets/images/asm.png";
+import imgHaskell from "./assets/images/haskell.png";
+import imgJava from "./assets/images/java.png";
+import imgPytorch from "./assets/images/pytorch.png";
+import imgTensorflow from "./assets/images/tensorflow.png";
+import imgScikit from "./assets/images/scikit-learn.png";
+import imgNumpy from "./assets/images/numpy.png";
+import imgPandas from "./assets/images/pandas.png";
 import imgReact from "./assets/images/react.png";
 import imgNode from "./assets/images/node.png";
 import imgPython from "./assets/images/python.png";
@@ -34,48 +42,68 @@ import TrackapCustomisation from "./assets/images/Trackap/Customisation.png"
 
 const Competences = [
     {
-        image: imgReact,
-        alt: "React Logo",
-        value: 70
+        image: imgAsm,
+        alt: "ASM Logo",
     },
     {
-        image: imgNode,
-        alt: "NodeJs Logo",
-        value: 80
-    },
-    {
-        image: imgPython,
-        alt: "Python Logo",
-        value: 90
+        image: imgHaskell,
+        alt: "Haskell Logo",
     },
     {
         image: imgC,
         alt: "C Logo",
-        className: "hidden 2xl:block",
-        value: 80
     },
     {
         image: imgCpp,
         alt: "C++ Logo",
-        className: "hidden md:block",
-        value: 60,
+    },
+    {
+        image: imgPython,
+        alt: "Python Logo",
+    },
+    {
+        image: imgJava,
+        alt: "Java Logo",
+    },
+    {
+        image: imgPytorch,
+        alt: "Pytorch Logo",
+    },
+    {
+        image: imgTensorflow,
+        alt: "Tensorflow Logo",
+    },
+    {
+        image: imgScikit,
+        alt: "Scikit-learn Logo",
+    },
+    {
+        image: imgPandas,
+        alt: "Pandas Logo",
+    },
+    {
+        image: imgNumpy,
+        alt: "Numpy Logo",
+    },
+    {
+        image: imgReact,
+        alt: "React Logo",
+    },
+    {
+        image: imgNode,
+        alt: "NodeJs Logo",
     },
     {
         image: imgMongoDB,
         alt: "MongoDB Logo",
-        value: 80,
     },
     {
         image: imgSql,
         alt: "Sql Logo",
-        value: 60,
-        className: "hidden md:block"
     },
     {
         image: imgGit,
         alt: "Git Logo",
-        value: 70,
-        className: "hidden 2xl:block"
     }
 ]
 
@@ -134,7 +162,8 @@ function App() {
                     <p className={"font-light"}>Bonjour, Je suis</p>
                     <h1 className={"text-5xl md:text-7xl"}>Hugo GALAN.</h1>
                     <h1 className={"text-5xl md:text-7xl"}>Développeur.</h1>
-                    <p className={"md:text-2xl"}>Transformez votre vision en réalité digitale avec un développeur passionné et à l'écoute !
+                    <p className={"md:text-2xl"}>Transformez votre vision en réalité digitale avec un développeur
+                        passionné et à l'écoute !
                     </p>
                 </div>
                 <div id={"About"} className={"flex flex-col justify-center min-h-screen"}>
@@ -147,24 +176,30 @@ function App() {
                     <div className={"flex flex-col-reverse md:flex-row justify-around mt-6 lg:mt-10 gap-14"}>
                         <div className={"flex flex-col gap-5 md:w-6/12 reveal"}>
                             <h3>
-                                Bonjour, je suis Hugo. J'ai 19 ans, j'étudie a Epitech. J'ai développé une réelle curiosité pour les nouvelles
-                                technologies et j'aime m'amuser à les découvrir par moi-même.
+                                Bonjour, je m'appelle Hugo. J’ai {(new Date()).getFullYear() - 2004} ans, j'étudie à
+                                Epitech et je suis passionné par les nouvelles technologies. J'aime explorer et
+                                maîtriser ces innovations par moi-même.
                             </h3>
                             <h3>
-                                En tant que développeur, j'adore résoudre les problèmes ainsi qu'essayer de nouvelles
-                                choses pour me
-                                perfectionner. Je suis convaincu que l'apprentissage est une aventure perpétuelle et
-                                qu'il est
-                                important de se tenir informé des dernières avancées technologiques pour rester
-                                compétent dans mon domaine.
+                                En tant que développeur, je prends plaisir à résoudre des problèmes complexes et à
+                                expérimenter de nouvelles approches pour m'améliorer continuellement. Je crois fermement
+                                que l'apprentissage est un voyage sans fin et qu'il est crucial de rester à la pointe
+                                des technologies avancées pour demeurer performant dans mon domaine.
                             </h3>
                             <h3>
-                                J'aime travailler en équipe et je suis toujours à l'écoute des autres.
+                                Pour preuve, en plus de mon Master à Epitech en ingénierie logicielle et innovation,
+                                j'ai entrepris en quatrième année un deuxième Master en intelligence artificielle à
+                                l'université de Kent, afin d'acquérir une double expertise.
                             </h3>
                             <h3>
-                                Si vous avez des projets à réaliser, je serai ravi d'en échanger avec vous.
-                                N'hésitez pas à me <a href={"#Contact"}>contacter</a> pour en
-                                savoir plus sur les services que je propose en matière de développement.
+                                J'apprécie particulièrement le travail en équipe et je suis toujours à l'écoute des
+                                idées de mes collaborateurs. Ma curiosité insatiable me pousse constamment à apprendre
+                                et à m'adapter.
+                            </h3>
+                            <h3>
+                                Si vous avez des projets à réaliser, je serais ravi d'en discuter avec vous. N'hésitez
+                                pas à me <a href={"#Contact"}>contacter</a> pour découvrir comment je peux vous aider à
+                                concrétiser vos idées en matière de développement.
                             </h3>
                         </div>
                         <div className={"flex justify-center"}>
@@ -194,9 +229,9 @@ function App() {
                             <hr className={"reveal"}/>
                         </div>
                     </div>
-                    <div className={"flex flex-wrap justify-around gap-5 mt-6 lg:mt-10"}>
-                        {Competences.map((e, i) => <CardCompetence key={i} value={e.value} image={e.image} alt={e.alt}
-                                                                   className={e?.className} max={100} min={0}
+                    <div className={"grid grid-cols-4 lg:grid-cols-6 gap-5 mt-6 lg:mt-10"}>
+                        {Competences.map((e, i) => <CardCompetence key={i} image={e.image} alt={e.alt}
+                                                                   max={100} min={0}
                                                                    color={defaultTheme.theme.colors.third}/>)}
                     </div>
                 </div>
@@ -217,15 +252,15 @@ function App() {
                         <div
                             className={"flex flex-row justify-center flex-wrap items-center w-full md:w-2/3 reveal"}>
                             <div className={"flex flex-col justify-center items-center gap-2 mt-10 w-1/2"}>
-                                <a href={"mailto:contact@hgalan.dev"} aria-label={"Send me a mail"}>
+                                <a href={"mailto:hugo.galan8@gmail.com"} aria-label={"Send me a mail"}>
                                     <SvgMail className={"w-10"} color={defaultTheme.theme.colors.third}/>
                                 </a>
                                 <p className={"text-center"}>
-                                    contact@hgalan.dev
+                                    hugo.galan8@gmail.com
                                 </p>
                             </div>
                             <div className={"flex flex-col justify-center items-center gap-2 mt-10 w-1/2"}>
-                                <a href={"https://www.linkedin.com/in/hugo-galan-8a8290233/"}
+                                <a href={"https://www.linkedin.com/in/hugo-galan-259743287/"}
                                    aria-label={"Go on my linkedin"} target={"_blank"}
                                    rel={"noreferrer"}>
                                     <SvgLinkedin className={"w-10"} color={defaultTheme.theme.colors.third}/>
